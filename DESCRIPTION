@@ -11,5 +11,6 @@ Authors@R: c(
 Description: It provides a simple way of performing distance-based
     and weighted-distance-based discriminant analysis.
 Imports: stats, graphics
+URL: https://github.com/ItziarI/WeDiBaDis
 License: GPL-2
 LazyData: true
