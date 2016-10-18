@@ -6,11 +6,12 @@
 \description{ Given a data set or a distance matrix, it performs Distance-Based (DB) and Weighted-Distance-Based (WDB) discriminant analysis. 
 }
 \usage{
-WDBdisc(data, datatype, new.ind=NULL, distance="euclidean", method, type)
+WDBdisc(data, datatype, classcol=1, new.ind=NULL, distance="euclidean", method, type)
 }
 \arguments{
-  \item{data}{ a data matrix or a distance matrix, with the restriction that the first column must contain the class labels.}
+  \item{data}{ a data matrix or a distance matrix, with a column containing the class labels.}
   \item{datatype}{ if the data is a data matrix, datatype="m"; if the data is a distance matrix datatype="d".}
+  \item{classcol}{ a number indicating which column in the data contains the class variable. By default the class variable is in the first column}
   \item{new.ind}{ NULL if there are not new individuals to classify (default value). When there are new individuals to classify: if datatype="m", it is a matrix containing the feature values for the new units to be classified; if datatype="d" it is a matrix containing each row the distances between the new unit to be classified and the units in the classes.}
   \item{distance}{ the distance measure to be used. This must be one of "euclidean"(default value), "correlation", "Bhattacharyya", "Gower", "Mahalanobis", "BrayCurtis", "Orloci", "Hellinger", or "Prevosti".}
   \item{type}{ only required if distance = "Gower". \code{type} is a list object \code{type = list(cuant,nom,bin)} indicating the column positions in the data matrix of continuous (cont), nominal (nom) and binary (bin) features, respectively.}
