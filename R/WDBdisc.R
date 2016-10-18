@@ -1,10 +1,14 @@
 #
 #si es related en data y en new.ind se ha de poner en data la distancia relate y en new.ind lo mismo
-#y en la priemra columna la etiquet
-WDBdisc <- function(data, datatype, new.ind=NULL, distance="euclidean", method="WDB", type){
+WDBdisc <- function(data, datatype, classcol=1, new.ind=NULL, distance="euclidean", method="WDB", type){
     if (datatype =="d"){
        aux<-as.matrix(data[, -1])
        if(dim(aux)[1]!=(dim(aux)[2])) stop("incorrect distance matrix")
+    }
+    p <- dim(data)[2]
+    classcol <- as.numeric(classcol)
+    if ((classcol<0)|(classcol > p) ){
+           stop("incorrect number of column for the class variable")
     }
 
     DISTANCES <- c("euclidean", "correlation", "Mahalanobis", "Gower", 
@@ -22,15 +26,15 @@ WDBdisc <- function(data, datatype, new.ind=NULL, distance="euclidean", method="
             stop("'data' must have at least 2 rows and columns")
 
    
-    clasetot <- data[,1]
+    clasetot <- data[,classcol]
     clasetot <- as.factor(clasetot)
     etiq <- levels(clasetot)
     if (datatype =="m"){
-            x <- data[, -1]
+            x <- data[, -classcol]
             if (distance=="Gower") {type <- lapply(type, function(a){a-1})}
             dtot <- as.matrix(distancia(x,distance,type))
     }else{
-            dtot <- as.matrix(data[, -1])
+            dtot <- as.matrix(data[, -classcol])
     }
     n <- dim(dtot)[1]
     K <- length(tabulate(clasetot))

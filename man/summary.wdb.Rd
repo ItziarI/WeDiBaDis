@@ -20,7 +20,7 @@ Gives summary results  based on the confusion matrix (Leave-One-Out approach) ob
 
 \details{
 The following summarizing measures are calculated:
-the generalized squared correlation which is a performance measure in a classification task, adequate for K>=2 classes; sensibility, specificity and predicted value for each class.
+the generalized squared correlation  and the Cohen's kappa coefficient which are performance measures in a classification task, adequate for K>=2 classes; sensibility, specificity, predicted value and F1-score for each class.
 
 It can be used with a \code{plot} method and it creates a barplot with sensibility, specificity and predicted value for each class.
 }
@@ -28,6 +28,8 @@ It can be used with a \code{plot} method and it creates a barplot with sensibili
 Baldi P., Brunak S., Chauvin Y., Andersen C., Nielsen H. (2000) Assessing the accuracy of prediction algorithms for classification: an overview. \emph{ Bioinformatics}, \bold{ 16}, 412--424.
 
 Matthews B. (1975) Comparison of the predicted and observed secondary structure of T4 Phage Lysozyme. \emph{Biochimica Biophysica Acta}, \bold{405}, 442--451.
+
+Cohen J. (1960) A Coefficient of Agreement for Nominal Scales. \emph{Educational and Psychological Measurement}, \bold{20}, 37--46.
 }
 
 \author{
