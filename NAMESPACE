@@ -13,3 +13,4 @@ S3method(print, wdb)
 S3method(summary, wdb)
 S3method(plot, wdb)
 S3method(plot, summarywdb)
+

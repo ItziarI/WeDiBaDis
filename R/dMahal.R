@@ -6,7 +6,7 @@ dMahal<-function (x, tol=1e-8)
         }else{
                 missing <- FALSE
         }
-        S <- cov(x, use="complete.obs")
+        S <- stats::cov(x, use="complete.obs")
         vd <- svd(S)$d
         if(min(abs(vd)) < tol)
         {
@@ -21,6 +21,6 @@ dMahal<-function (x, tol=1e-8)
                
                 d <- dMahalNOmissing(x, S)
         }     
-    d <- as.dist(d)
+    d <- stats::as.dist(d)
     return(d)
 }

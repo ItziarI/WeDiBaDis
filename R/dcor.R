@@ -14,9 +14,9 @@ dcor<-function(x)
         }else
         {
                 aux<-t(x)
-                d<-sqrt(1-cor(aux))
+                d<-sqrt(1-stats::cor(aux))
         }
-        d <- as.dist(d)
+        d <- stats::as.dist(d)
         return(d)    
 
 }

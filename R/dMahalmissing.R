@@ -18,6 +18,6 @@ dMahalmissing<-function (x, S)
             d[j, i] <- d[i, j]
         }
     }
-    d <- as.dist(d)
+    d <- stats::as.dist(d)
     return(d)
 }

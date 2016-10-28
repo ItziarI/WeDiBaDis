@@ -3,7 +3,7 @@ dBrayCurtisNOmissing <- function(x)
         n <- dim(x)[1]
         parcial <- apply(x, 1, sum)
         
-        d<-as.matrix(dist(x,method="manhattan"))
+        d<-as.matrix(stats::dist(x,method="manhattan"))
         
         for (i in 1:(n-1)){
                 for (j in (i+1):n){

@@ -31,7 +31,7 @@ dPrevostimissing<-function(x){
 
                 
                 d <- d/(2*nu)
-                d <- as.dist(d)
+                d <- stats::as.dist(d)
                 
                 
         }else

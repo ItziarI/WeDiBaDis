@@ -16,9 +16,9 @@ dHellinger<-function(x){
         }else{
                 y <- t(apply(x, 1, function(f){f/(sum(f))}))
                 y <- sqrt(y)
-                d <- dist(y)
+                d <- stats::dist(y)
         }     
 
-    d <- as.dist(d)
+    d <- stats::as.dist(d)
     return(d)
 }

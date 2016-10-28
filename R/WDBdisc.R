@@ -127,8 +127,8 @@ WDBdisc <- function(data, datatype, classcol=1, new.ind=NULL, distance="euclidea
             pred.matrix <- matrix( etiq[Pred.ind], ncol=1)
             dimnames(pred.matrix) <- list(1:m, "Pred. class")
     }
-
-    RVAL <- list(conf=conf.matrix, pred=pred.matrix, method=method)
+    input <- ifelse(datatype =="d", "custom dist.", DISTANCES[distance2])
+    RVAL <- list(conf=conf.matrix, pred=pred.matrix, parameters=list(method=method, input=input))
     class(RVAL) <- "wdb"
     return(RVAL)
 }

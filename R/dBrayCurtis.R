@@ -17,6 +17,6 @@ dBrayCurtis<-function(x){
                 d <- dBrayCurtisNOmissing(x)
         }     
 
-    d <- as.dist(d)
+    d <- stats::as.dist(d)
     return(d)
 }

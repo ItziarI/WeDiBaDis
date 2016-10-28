@@ -12,7 +12,7 @@ dcormissing <- function(x)
             xj <- x[j, ]
             mj <- sapply(xj, is.na)
             m <- !(mi | mj)
-            d[i, j] <- sqrt(1-cor(xi[m], xj[m]))
+            d[i, j] <- sqrt(1-stats::cor(xi[m], xj[m]))
             d[j, i] <- d[i, j]
     }
  }

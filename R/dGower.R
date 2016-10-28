@@ -53,7 +53,7 @@ dGower<-function (x, type = list())
     else {
         d <- gowerNOmissing_v2(x, vc, vb, vn)
     }
-    d <- as.dist(d)
+    d <- stats::as.dist(d)
     return(d)
 }
 

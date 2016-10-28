@@ -15,10 +15,10 @@ dOrloci<-function(x){
                 d <- dOrlocimissing(x)
         }else{
                 y <- t(apply(x, 1, function(f){f/sqrt(sum(f^2))}))
-                d <- dist(y)
+                d <- stats::dist(y)
         }     
         
-        d <- as.dist(d)
+        d <- stats::as.dist(d)
         return(d)
 
 }

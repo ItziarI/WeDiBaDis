@@ -8,13 +8,14 @@ Plot results of WDB classificacion
 Creates a barplot with   the predicted classes by  \code{\link{WDBdisc}}. Each bar corresponds to a class and for units belonging to this class the distribution of the predicted classes is shown within the bar.
 }
 \usage{
- \method{plot}{wdb}(x, leg=TRUE, col=NULL, \dots) 
+ \method{plot}{wdb}(x, leg=TRUE, col=NULL, inset=-0.1, \dots) 
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{ object of class 'wdb' obtained by \code{\link{WDBdisc}}.}
   \item{leg}{logical. If TRUE a legend will be placed at the top (default value). }
   \item{col}{a vector of colors for the bars or bar components. By default, \code{rainbow} is used.}
+  \item{inset}{parameter to controll the position of the legend in the graphic. By default, \code{inset=-0.1} is used.}
   \item{\dots}{ arguments based from or to other methods.}
 }
 

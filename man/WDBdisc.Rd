@@ -62,7 +62,8 @@ train <- corearea[-selec, ]
 test <- corearea[selec, -1]
 out <- WDBdisc(data=train, datatype="m", new.ind=test, 
                distance="euclidean", method="WDB")
-summary(out)}
+summary(out)
+}
 
 # A distance matrix as input 
 # Generate 3 classes, each of them with 20 units in dimension 5.

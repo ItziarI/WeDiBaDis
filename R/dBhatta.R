@@ -23,7 +23,7 @@ dBhatta<-function (x)
                 }
             d <- dBhattaNOmissing(x)
         }
-   d <- as.dist(d)
+   d <- stats::as.dist(d)
    return(d)    
 
 }

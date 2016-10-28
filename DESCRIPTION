@@ -2,7 +2,7 @@ Package: WeDiBaDis
 Type: Package
 Title: Weighted Distance-Based Discriminant Analysis
 Version: 1.0.0
-Date: 2016-04-14
+Date: 2016-10-24
 Authors@R: c(
     person("Concepcion", "Arenas", email = "carenas@ub.edu", role = c("aut")),
     person("Itziar", "Irigoien", email = "itziar.irigoien@ehu.eus", role = c("cre", "aut")),
@@ -14,3 +14,4 @@ Imports: stats, graphics
 URL: https://github.com/ItziarI/WeDiBaDis
 License: GPL-2
 LazyData: true
+RoxygenNote: 5.0.1
