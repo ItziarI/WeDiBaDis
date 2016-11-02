@@ -8,6 +8,8 @@ Authors@R: c(
     person("Itziar", "Irigoien", email = "itziar.irigoien@ehu.eus", role = c("cre", "aut")),
     person("Francesc", "Mestres", email = "fmestres@ub.edu", role = "aut")
     )
+Depends:
+    R(>= 3.3.1)
 Description: It provides a simple way of performing distance-based
     and weighted-distance-based discriminant analysis.
 Imports: stats, graphics
