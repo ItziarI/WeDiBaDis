@@ -53,8 +53,12 @@ Imagine we have 3 units with unkown classes in object `x0` and we want to predic
 aux <- c(rnorm(5, mean = mu1, sd = 1), rnorm(5, mean = mu2, sd = 1), rnorm(5, mean = mu3, sd = 1))
 x0 <- matrix(aux, ncol=5, byrow=TRUE)
 
+# Distances from units x0 to the 60 units in data set x
+dx0 <- as.matrix(dist(rbind(x, x0)))[61:63, 1:60]
+
+
 # Prediction of classes
-out <- WDBdisc(data=join, datatype="d", method="DB", new.ind=x0)
+out <- WDBdisc(data=join, datatype="d", method="DB", new.ind=dx0)
 summary(out)
 ```
 
